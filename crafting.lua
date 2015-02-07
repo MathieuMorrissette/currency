@@ -47,25 +47,42 @@ minetest.register_craft({
 	recipe = {"currency:minegeld_5"},
 })
 
+--Ajout des billets de 20 Minegeld's :D / Adds 20 Minegeld's note
 minetest.register_craft({
 	type = "shapeless",
-	output = "currency:minegeld_bundle",
-	recipe = {
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld",
-		"group:minegeld"
-	},
+	output = "currency:minegeld_20",
+	recipe = {"currency:minegeld_10", "currency:minegeld_10"},
 })
 
 minetest.register_craft({
-	type = "fuel",
-	recipe = "currency:minegeld_bundle",
-	burntime = 1,
+	type = "shapeless",
+	output = "currency:minegeld_10 2",
+	recipe = {"currency:minegeld_20"},
+})
+
+--Ajout des billets de 50 Minegeld's :D / Adds 50 Minegeld's note
+minetest.register_craft({
+	type = "shapeless",
+	output = "currency:minegeld_50",
+	recipe = {"currency:minegeld_20", "currency:minegeld_20","currency:minegeld_10"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "currency:minegeld_10 5",
+	recipe = {"currency:minegeld_50"},
+})
+
+--Ajout des billets de 100 Minegeld's :D / Adds 100 Minegeld's note
+minetest.register_craft({
+	type = "shapeless",
+	output = "currency:minegeld_100",
+	recipe = {"currency:minegeld_20", "currency:minegeld_20","currency:minegeld_10","currency:minegeld_20", "currency:minegeld_20","currency:minegeld_10"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "currency:minegeld_10 10",
+	recipe = {"currency:minegeld_100"},
 })
 
